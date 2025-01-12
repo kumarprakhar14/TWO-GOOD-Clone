@@ -119,10 +119,19 @@ videocon.addEventListener("mousemove", function(dets){
 videoconAnimation()
 
 function loadingAnimation(){
+
+    gsap.from("#nav", {
+        y: -100,
+        opacity: 0,
+        delay: 0.2,
+        duration: 0.9, 
+        stagger: 0.2
+    })
+
     gsap.from("#page1 h1", {
         y: 100,
         opacity: 0,
-        delay: 0.5,
+        delay: 1,
         duration: 0.9, 
         stagger: 0.2
     })
@@ -130,7 +139,7 @@ function loadingAnimation(){
     gsap.from("#page1 #video-container", {
         scale: 0.9,
         opacity: 0,
-        delay: 1.3,
+        delay: 1.7,
         duration: 0.5, 
     })
 }
